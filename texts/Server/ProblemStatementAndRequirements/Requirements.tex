@@ -1,3 +1,10 @@
 \subsubsection{Requirements}
 \label{s_serviceRequirements}
+This section will focus on the requirements for the server, though only the non-functional requirements will be listed. For an overview of the functional requirements see section~\ref{s_clientRequirements}
+\\
+\begin{enumerate}
+	\item When put into production the server should have an uptime of at least 99 \% of planned uptime. Downtime, due to maintenance, must be announced at least 48 hours ahead.
+	\item From the time a request has been received, to the time an answer has been sent, no more than 500 millisecond must have passed. Expect when the answer contains a product-file (image, movie, video, etc.), in this case there is no deadline.
+	\item All data (except the product-file itself) must be persisted for at least 5 years after it has gone out of usage (for legal reasons).
+\end{enumerate}
 \newpage
