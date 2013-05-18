@@ -12,6 +12,14 @@
 \usepackage{float}
 \usepackage{url} % URLs used for 
 \usepackage{fancyhdr}
+\usepackage[utf8]{inputenc} % Use UTF 8. This allows æ, ø, å
+\usepackage{longtable} % tables over multiple pages
+\usepackage{pdfpages} % include PDF
+\usepackage{enumitem} % used bu the set list markup
+
+% Markup
+\setlength{\parskip}{0.8em} % Setting paragraph view
+\setlist[itemize]{itemsep=0.1em, topsep=0pt} % Setting distance between items and around item group
 
 % commands
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % custom command used for tables
