@@ -1,1 +1,75 @@
 \subsubsection{Data Model}
+When planning how to implement the server we had to decide on how to store our data. We had earlier decided to use MSSQL. To plan this we created a data model.
+\begin{figure}[t]
+  \includegraphics[width=\textwidth]{illustrations/Datamodel.png}
+  \caption{Our final data model as used by the server}
+  \label{fig:datamodel}
+\end{figure}
+We will now explain the different entities, and their purpose in our program
+
+\subsubsubsection{User}
+Our first and possibly most important entity is the User entity. This contains all information regarding users of our system. Each user also has a country, referenced through the country entity explained later.
+
+Furthermore, we have defined a user type for each user. This makes it possible to have all our users in one place, even if one is admin, and another one is a customer. We have also created a separate entity for this; Usertype.
+
+\subsubsubsection{Country}
+Each user must have a country defined. The reason we modeled this as a separate entity is so that the user can select their country from a list of available ones.
+
+\subsubsubsection{Usertype}
+The user type defines which type the user has. The possible values in our program is
+\begin{itemize}
+	\item Customer
+	\item Content provider
+	\item Admin
+\end{itemize}
+
+Each usertype has zero-to-many action groups. The function of that entity is explained later
+
+\subsubsubsection{ActionGroup}
+An action group is a way to gather some permissions in a group. This way we avoid having to give a lot of permissions to a user type. Our initial idea was to create action groups having names like `View general data', `Create and edit products' and `Administer products'. This would make it easy to create a new user type like `Content moderator' and assign permissions.
+
+Our implementation was not like this though. We ended up making this entity completely useless as we created the exact same action groups as we had user types.
+
+\subsubsubsection{AllowedAction}
+Our allowed action entity is our way of defining permissions in the system. Whenever you need to check whether or not a user has permission to do something in our system you check the allowed action name (an example could be BAN\_UNBAN\_ANY)
+
+The allowed action is referenced by both the action group entity product. This is because we have chosen to model whether or not products should be buyable or rentable in our permissions system. Products can therefore have BUYABLE and RENTABLE allowed actions.
+
+\subsubsubsection{Product} 
+Product is our main entity for storing movies, ebooks etc. It has some base information about products. It also has a product type. This is through the ProductType entity as described later.
+
+There are three other entities that refer to products.
+\begin{itemize}
+	\item MetaData
+	\item ProductRating
+	\item Transaction
+\end{itemize}
+All of which is described later.
+
+\subsubsubsection{ProductType}
+Each product has a product type. The product type is used to semantically separate the different types of products. Furthermore, it references another entity called MimeType.
+
+\subsubsubsection{MimeType}
+MimeType is used to limit which files can be uploaded for a specific product type. When creating a product you choose which type it is of. As it makes no sense to upload a pdf file for a product of type `Movie' we chose to limit this using the information stored here.
+
+\subsubsubsection{MetaData}
+A product can have zero-to-many metadata attached. This can be used to describe things that are specific to the particular product. Like pages for an ebooks, length for a movie etc. Each metadata has a type
+
+\subsubsubsection{MetaDataType}
+The MetaDataType entity is used to control metadata. If users were to enter metadata, we would like to limit which type they could enter, to avoid things like `length', `Length', `LENgTh' and `Lengt' which are basically the same thing. It would also make search more versatile, as you, in theory, could search for movies with a length of over 1 hour.
+
+\subsubsubsection{ProductRating}
+This entity is used to store ratings that users have cast on products. Each user can only have one rating on a product. If it already exists the system should update it instead.
+
+We have defined rating to be from -5 to 5. This means that user can be positive or negative towards a product.
+
+\subsubsubsection{Transaction}
+Our transaction entity stores the purchases made. It records the information needed by our system for a purchase. If it is a rent the expire date is also added
+
+\subsubsubsection{Log}
+While we planned our entire data model we wanted to make everything loggable. It is just important to be able to monitor the system and the activity herein. Furthermore, our implementation would make it possible to revert things to previous states.
+
+Each entry has a type. This is the LogEntryType entity
+
+\subsubsubsection{LogEntryType}
+This entity was planned to make searching through log entries easier. If we wanted to know how many people have logged in this year we could just take the log entries of type `login' and count them.
