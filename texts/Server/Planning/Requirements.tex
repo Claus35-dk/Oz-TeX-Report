@@ -1,9 +1,32 @@
 \subsubsection{Requirements}
 \label{s_serviceRequirements}
-This section will focus on the requirements for the server, though only the non-functional requirements will be listed. For an overview of the functional requirements see section~\ref{s_clientRequirements}
+This section will focus on the requirements for the server. The following list, lists the non-functional requirements we have set for the web service.
 \\
-\begin{enumerate}
+\begin{enumerate}[label=NFR-\arabic*]
 	\item When put into production the server should have an uptime of at least 99 \% of planned uptime. Downtime, due to maintenance, must be announced at least 48 hours ahead.
 	\item From the time a request has been received, to the time an answer has been sent, no more than 500 millisecond must have passed. Expect when the answer contains a product-file (image, movie, video, etc.), in this case there is no deadline.
 	\item All data (except the product-file itself) must be persisted for at least 5 years after it has gone out of usage (for legal reasons).
+\end{enumerate}
+
+The next list show all of the functional requirements we have set, together with SMU, for the web service.
+
+\begin{enumerate}[label=FR-\arabic*]
+	\item Register new account
+	\item Log in
+	\item Log out
+	\item Customers can buy products
+	\item Customers can rent products
+	\item Customers can rate products
+	\item Customers can stream products
+	\item Customers can download products
+	\item Customers and content providers can change their own account information
+	\item Content providers can upload product files
+	\item Content providers can create new products
+	\item Content providers can upload product thumbnails
+	\item Content providers can change informations about their own products
+	\item Admins can change information about any product
+	\item Admins can change information about any account
+	\item Admins can get a list of all accounts
+	\item Admins can ban an account
+	\item Admins can unban an account
 \end{enumerate}
