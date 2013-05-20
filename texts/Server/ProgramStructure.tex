@@ -10,16 +10,27 @@ Our system is build of modules which are put together like bricks into layers th
 
 Each Module can be replaced and the Checking Layer is entirely optional. For example one might want to change the Persistence Layer to persist against a file-system instead of a database, or one might want to do less or more extensive checks in the Checking Layer, without changing any of the other layers.
 
-\paragraph{Outer Layer}
-\paragraph{Checking Layer}
-\paragraph{Application Logic Layer}
-\paragraph{Persistence Layer}
+\subsubsubsection{Outer Layer}
+We planned to write a thin C\Sh layer. The only responsibility for this layer would be to call the corresponding F\Sh functions. This, however, did not go as planned.
 
-\begin{figure}[t]
+The layer ended up being responsible for receiving data, converting data and sending this to the F\Sh function. When data were to be extracted the layer was responsible for receiving data from F\Sh, converting data and sending to the client.
+
+This actually turned out to be okay, as we, in theory, could create a SOAP web service without any hassle, and we could possible extend it to different other services as well.
+\subsubsubsection{Checking Layer}
+Our checking layer is responsible for checking permissions on the users with the permissions. It could possibly do more than just check permissions.
+
+We have created this layer, so that it can be removed without any functionality missing.
+\subsubsubsection{Application Logic Layer}
+In this layer we perform all our application logic. It is completely unaware of how data is store however. Data selection and storage is handled elsewhere
+\subsubsubsection{Persistence Layer}
+This layer is responsible for storing data. It has been made as generic as possible, so that if we chose to change storage to file instead it would be easy. It is also possible to easily implement a separate search-server if needed.
+
+\begin{figure}[H]
   \includegraphics[width=\textwidth]{illustrations/ServerStructure.png}
   \caption{Our Server Structure}
   \label{fig:serverstructure}
 \end{figure}
 
 \subsubsection{Patterns Applied}
+MAYBE TODO
 \newpage
