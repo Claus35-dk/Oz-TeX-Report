@@ -26,6 +26,10 @@
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % custom command used for tables
 \newcommand{\specialcell}[1]{\begin{tabular}{@{}c@{}#1\end{tabular}}}
 \newcommand{\Sh}{\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \#}}
+\newcommand{\cref}[1]{ Figure \ref{#1}, page~\pageref{#1}}
+\newcommand{\acref}[1]{ Appendix, \cref{#1}}
+\newcommand{\tref}[1]{ Table \ref{#1}, page~\pageref{#1}}
+\newcommand{\atref}[1]{ Appendix, \tref{#1}}
 
 % define the author and title for frontpage
 \author{Oz}
