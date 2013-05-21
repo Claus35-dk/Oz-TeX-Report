@@ -1,6 +1,4 @@
 \subsubsection{Requirements}
-For the client we mainly had the same functional requirements as we had for the web service, see section \ref{s_serviceRequirements}, page \pageref{s_serviceRequirements}.
+For the client we had the same functional requirements as we had for the web service, see section \ref{s_serviceRequirements}, page \pageref{s_serviceRequirements}.
 
-We did have some non-functional requirements though, which mainly were maintenance related. We wanted to make a structure for the client that made i easy to reuse and create new content holders and other useful code blocks.
-% Følgende virker vagt og bør omformuleres. Skriver vi et sted, at vi har valgt at lave klienten objektorienteret?
-We did not go into detail on how to measure the accomplishment of this requirement, but thought that we all know pretty much how it should be.
+Regarding non-functional requirements we only settled for a single requirement: From the time a request has been received to the time an response has been sent, no more than 1000 millisecond must have passed, except for product file requests, in which case the transfer only is required to have started.
