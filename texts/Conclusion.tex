@@ -1,24 +1,15 @@
 \section{Conclusion}
-In this report we follow the development of a web service and a matching client in form of a website. We begin the report by introducing the project and specifying it by choosing technologies and target audience. We also introduce our collaboration with a Singaporean group of students.
-\\After that our report is divided into two parts: Server and Client. Each part describes the process of development for the part at hand.
-\\An important part of this project was our collaboration with a Singaporean group of students. An accord of our collaboration can be found in the Server part of this report as our collaboration was in regard to the server and the web services it is hosting.
+In this report we follow the development of a web service and a matching client in form of a website. An important part of this project was our collaboration with a Singaporean group of students. An accord of our collaboration can be found in the Server part of this report as our collaboration was in regard to the server and the web services it is hosting.
 
 We were terribly behind on our assignments and we did not have time to write a review of another groups report.
 
 \subsubsubsection{Server}
-We created a web services written partly in C\Sh, but mostly in F\Sh. We set a number of requirements for our service. Due to the combined load of the shared server we do not meet our requirements for uptime and response time. We meet almost all requirements. The lacking functionality is listed in our To do list:
-% Be aware: The Todo is copied from the Server\Quality chapter. Any changes should be synchronized.
-\begin{itemize}
-\item Handling metadata not implemented in the C\Sh outer layer
-\item Somehow support deletion of products without robbing the customer of his purchase
-\item Throw correct error code when creating an account that already exists
-\item Correct product rating calculations
-\end{itemize}
-\mbox{}For the web service API see \apref{API_PDF}.
+We created a web services written partly in C\Sh, but mostly in F\Sh. We set a number of requirements for our service. Due to the combined load on the shared server we do not always meet our requirements for uptime and response time. We meet almost all functional requirements. 
+\\For a full list see \pref{serverfulfil}.
+\\For the web service API see \apref{API_PDF}.
 
 \subsubsubsection{Collaboration}
 We had a successful collaboration with our Singaporean group. Lynette, Cai Ling and Celestine were as engaged and enthusiastic about the project as we were. We held two weekly meetings and we chatted daily.
-% Tilføj mere - Claus
 
 \subsubsubsection{Client}
 We created a client in object oriented PHP which utilize the web service hosted on our server. The client is written by the principles of the MVC design pattern and its modules is interchangeable.
