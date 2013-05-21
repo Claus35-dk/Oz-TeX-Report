@@ -1,7 +1,7 @@
 \subsection{Program Structure}
 As mentioned our server is written in F\Sh which is a very powerful functional programming language with Types and parallel programming abilities. F\Sh can even be object oriented, but we have chosen not to use these abilities: We wanted the exercise of writing a fully functional system.
 
-Our system is build of modules which are put together like bricks into layers that create a great structure.
+Our system is build of modules which are put together like bricks into layers that create a great structure. \textbf{[ TODO: Not quite satisfied with this formulation (M) ]}
 \\We have an Outer Layer - or shell - which is the published Web Service. This layer is actually written in C\Sh.
 \\Then we have a Checking Layer which uses a Permission Module to verify users and permissions before invoking functions deeper.
 \\The Application Logic Layer is the actual working layer which has Account Module Product Module and more.
@@ -21,7 +21,7 @@ Our checking layer is responsible for checking permissions on the users with the
 
 We have created this layer, so that it can be removed without any functionality missing.
 \subsubsubsection{Application Logic Layer}
-In this layer we perform all our application logic. It is completely unaware of how data is store however. Data selection and storage is handled elsewhere
+In this layer we perform all our application logic. It is completely unaware of how data is stored however. Data selection and storage is handled elsewhere
 \subsubsubsection{Persistence Layer}
 This layer is responsible for storing data. It has been made as generic as possible, so that if we chose to change storage to file instead it would be easy. It is also possible to easily implement a separate search-server if needed.
 
@@ -30,7 +30,4 @@ This layer is responsible for storing data. It has been made as generic as possi
   \caption{Our Server Structure}
   \label{fig:serverstructure}
 \end{figure}
-
-\subsubsection{Patterns Applied}
-MAYBE TODO
 \newpage
