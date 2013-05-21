@@ -1,7 +1,7 @@
 % !TeX spellcheck = en_US
 \subsubsection{Data Model}
-When planning how to implement the server we had to decide on how to store our data. We had earlier decided to use MSSQL \textbf{[TODO: Den sætning virker underligt placeret?]}. To plan this we created a data model.
-\begin{figure}[t]
+When planning how to implement the server we had to decide on how to store our data. We had earlier decided to use MSSQL \textbf{[TODO: Den sætning virker underligt placeret? (K) ]}. To plan this we created a data model.
+\begin{figure}[H]
   \includegraphics[width=\textwidth]{illustrations/Datamodel.png}
   \caption{Our final data model as used by the server}
   \label{fig:datamodel}
@@ -10,7 +10,7 @@ We will now explain the different entities, and their purpose in our program.
 
 \begin{description}
 \item[User] \hfill \\
-Our first and possibly most important entity is the User entity. This contains all information regarding users of our system \textbf{[TODO: Everything here? Keep reading :)]}. Each user also has a country, referenced through the Country entity explained later.
+Our first and possibly most important entity is the User entity. This contains all information regarding users of our system \textbf{[TODO: Everything here? Keep reading :) (K) ]}. Each user also has a country, referenced through the Country entity explained later.
 
 Furthermore, we have defined a user type for each user. This makes it possible to have all our users in one place, even if one is admin, and another one is a customer. We have created a separate entity for this; Usertype.
 
