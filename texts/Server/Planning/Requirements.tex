@@ -10,12 +10,12 @@ This section will focus on the requirements for the server. The following list l
 	\item All data (except the product-file itself) must be persisted for at least 5 years after it has gone out of usage (for legal reasons).
 \end{enumerate}
 
-The functional requirements for the server is derived from the use cases and the use case diagram. They can be seen in table \ref{functionalRequirements}.
+The functional requirements for the server is derived from the use cases and the use case diagram. They can be seen in \tref{functionalRequirements}.
 
 \newcounter{FR_Counter}
 
 
-\begin{table}
+\begin{table}[H]
 \centering
 \caption{Functional requirements}
 \begin{tabular}{|c|p{7cm}|c|c|c|c|}
@@ -58,6 +58,6 @@ ID & Description & NS & C & CP & A \\ \hline
 \refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View customer purchases &  &  &  & X \\ \hline
 \end{tabular}\\
 \vspace{3mm}
-NA = Non-authendicated, C = Customer, \\CP = Content provider, A = Admin
+NA = Non-authenticated, C = Customer, \\CP = Content provider, A = Admin
 \label{functionalRequirements}
 \end{table}
