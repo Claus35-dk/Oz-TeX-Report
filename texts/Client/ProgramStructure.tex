@@ -1,11 +1,12 @@
+% !TeX spellcheck = en_US
 \subsection{Program Structure}
 We spent a long time planning the program structure before developing our client. We wanted to have a good plan in this part, contrary to the previous one.
 
-We chose to use the MVC pattern for structuring our client. Furthermore it was divided up into modules, each responsible for their part. It made it easy to extend, or take modules out.
+We chose to use the MVC pattern for structuring our client. Furthermore it was divided up into modules, each responsible for their own part. It made it easy to add or remove modules.
 
-When a request is made for a page in our client, we find the module to use from the URI requested. The next argument in the URI is which method to invoke. In our variation of MVC we invoke the method requested in the modules default controller. This is then responsible for returning some renderable content which in our case is a widget.
+When a request is made for a page in our client, we find the module to use from the URI requested. The next argument in the URI is which method to invoke. In our variation of MVC we invoke the method requested in the modules default controller. This is then responsible for returning some renderable content in form of a widget.
 
-Our implementation of the MVC pattern defines View a little different than traditionally. We have a single view in our entire system: the CommonView. What this does is create the header and footer, and put the page content in the middle. All other view in our system are widgets. A widget is an object that can be turned into some HTML. The base class of widget basically just forces subclasses to override the ToHtml method.
+Our implementation of the MVC pattern defines View a little different than traditionally. We have a single view in our entire system: the CommonView. What this does is creating the header and footer, and put the page content in the middle. All other view in our system are widgets. A widget is an object that can be turned into HTML. The base class of a all widgets basically just forces subclasses to override the ToHtml method.
 
 The widget structure is based on the composite pattern. A lot of the widgets can contain other widgets. Just like a lot of HTML elements can contain other HTML elements.
 
