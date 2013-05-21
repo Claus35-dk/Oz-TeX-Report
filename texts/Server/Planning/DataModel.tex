@@ -1,23 +1,23 @@
 \subsubsection{Data Model}
-When planning the implementation of the server we had to decide how to store our data. We had previously decided to use MSSQL \textbf{[TODO: Den sætning virker underligt placeret? (K) ]}. To plan this we created a data model.
+When planning the implementation of the server we decided to use a MSSQL database to store our data in. Then we spend hours considering different scenarios and arranging the entities into the following data model.
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{illustrations/Datamodel.png}
   \caption{Our data model as used by the database}
   \label{fig:datamodel}
 \end{figure}
-We will now explain the different entities, and their purpose in our program.
+We will now explain the different entities, and their purpose in our system.
 
 \begin{description}
 \item[User] \hfill \\
-Our first and possibly most important entity is the User entity. This contains all information regarding users of our system \todo{Everything here? Keep reading :)}{Krüger}. Each user also has a country, referenced through the Country entity explained later.
+Our first and possibly most important entity is the User entity. This contains information regarding users of our system. Each user also has an optional country, referenced through the Country entity explained later.
 
-Furthermore, we have defined a user type for each user. This makes it possible to have all our users in one place, even if one is admin, and another one is a customer. We have created a separate entity for this; Usertype.
+Furthermore, a user type has a relation to the usertype entity. Having usertype as a separate entity as opposed to simply an attribute makes it possible for us to create relations to the type and not each individual user. We have a relation between usertype and ActionGroup, explained later.
 
 \item[Country] \hfill \\
-Each user must have a country defined. The reason we modeled this as a separate entity is so that the user can select their country from a list of available ones.
+Each user can have a country defined. The reason we modeled this as a separate entity is so that the user can select their country from a list of available ones.
 
 \item[Usertype] \hfill \\
-The user type defines which type the user has. The possible values in our program is:
+The user type defines which type the user is. The possible values in our program is:
 \begin{itemize}
 	\item Customer
 	\item Content provider
@@ -27,7 +27,7 @@ The user type defines which type the user has. The possible values in our progra
 Each usertype has zero-to-many action groups. The function of that entity is explained later.
 
 \item[ActionGroup] \hfill \\
-An action group is a way to gather permissions in a group. This way we avoid having to give a lot of permissions to a user type. Our initial idea was to create action groups having names like `View general data', `Create and edit products' and `Administer products'. This would make it easy to create a new user type like `Content moderator' and assign permissions.
+An action group is a way to gather permissions in a group. This way we avoid having to give a lot of permissions to a user type. Our initial idea was to create action groups having names like `View general data', `Create and edit products' and `Administer products'. This would make it easy to create a new user type like `Content moderator' and assign groups of permissions at a time.
 
 Our implementation was not like this though. We ended up making this entity completely useless as we created the exact same action groups as we had user types.
 
@@ -37,7 +37,7 @@ Our AllowedAction entity is our way of defining permissions in the system. Whene
 The allowed action is referenced by both the ActionGroup entity and the Product entity. This is because we have chosen to model whether or not products should be buyable or rentable in our permissions system. Products can therefore have BUYABLE and RENTABLE allowed actions.
 
 \item[Product] \hfill \\ 
-Product is our main entity for storing movies, ebooks etc. It has some base information about products. It also has a product type. This is through the ProductType entity as described later.
+Product is our main entity for storing information about movies, ebooks etc. It has some base information about products. It also has a product type. This is through the ProductType entity as described later.
 
 There are three other entities that refer to Products.
 \begin{itemize}
@@ -57,12 +57,12 @@ MimeType is used to limit which files can be uploaded for a specific product typ
 A product can have zero-to-many metadata attached. This can be used to describe things that are specific to the particular product. Like pages for an ebooks, length for a movie etc. Each metadata has a reference to the MetaDataType entity.
 
 \item[MetaDataType] \hfill \\
-The MetaDataType entity is used to control metadata. If users were to enter metadata, we would like to limit which type they could enter, to avoid things like `length', `Length', `LENgTh' and `Lengt' which are basically the same thing. It would also make search more versatile, as you, in theory, could search for movies with a length of over 1 hour.
+The MetaDataType entity is used to control metadata. If users were to enter metadata, we would like to limit which types they are able to enter, to avoid things like `length', `Length', `LENgTh' and `Lengt' which are basically the same thing. It would also make search more versatile, as you, in theory, could search for movies with a length of more than 1 hour.
 
 \item[ProductRating] \hfill \\
 This entity is used to store ratings that users have given products. Each user can only have one rating on each product. If a users tries to vote more than once, their vote should be updated.
 
-We have defined ratings to be from -5 to 5. This means that user can be positive or negative towards a product.
+We have defined ratings to be from -5 to 5. This means that users can be positive or negative towards a product.
 
 \item[Transaction] \hfill \\
 Our Transaction entity stores the purchases made. It records the information needed by our system for a purchase. If it is a rent the expire date is also stored here.
