@@ -12,9 +12,10 @@ We have produced a use case diagram, see \fref{useCaseImg}, which outlines the b
 
 \subsubsubsection{Use cases}
 \textbf{[TODO: Add the use cases to the client? Krüger asked.]}
-\textbf{[TODO: Vælg hvilke use cases som skal smide i apendix. Krüger said *indsæt socialt akavet smiley*.]}
-In the following section use cases for our system will be listed. Every use case will have a short description of the scenario the use case is representing, if there are any pre- or postconditions these will be mentioned and then the basic flow and success scenario will be listed.\\
-\textit{Only two use cases will be listed here. For a complete list of our use cases, see \apref{Apendix_usecases}}
+\textbf{[TODO: Vælg hvilke use cases som skal smide i apendix. Krüger said *indsæt socialt akavet smiley*. [ TODO: Ret 'apendix' til 'appendix' i TODO. Hilsen Philip.]]}
+
+In the following section example use cases for our system is listed. Every use case has a short description of the scenario it is representing, its pre- or postconditions if any, and then its basic flow and success scenario.\\
+Only two use cases is listed here. For a complete list of our use cases, see \apref{Apendix_usecases}
 
 \textbf{Success scenario: Register new user} \\
 Jane Doe wants to register and become a customer. 
@@ -27,7 +28,7 @@ Jane Doe wants to register and become a customer.
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Jane Doe clicks the "register" link.
 	\item Jane Doe enters the required information (email, username and password).
-	\item Jane Doe submits the request
+	\item Jane Doe submits the request.
 \end{enumerate}
 % % %
 \vspace{3mm}
@@ -35,7 +36,7 @@ Jane Doe wants to register and become a customer.
 Jane Doe wants see what products there are available of the type "ebook".
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> All actors\\
+\>Primary Actor:\> Any\\
 \>Precondition:\> -\\
 \>Postcondition:\> -
 \end{tabbing}
@@ -47,57 +48,57 @@ Jane Doe wants see what products there are available of the type "ebook".
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Log in} \\
-John doe wants to log in to his account. 
+John Doe wants to log in to his account. 
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Customer, Content Provider and Admin\\
-\>Precondition:\> The actor already has an account\\
+\>Primary Actor:\> Customer, Content Provider or Admin\\
+\>Precondition:\> The actor already has an account.\\
 \>Postcondition:\> The actor is logged in with her account.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item John Doe click on the "log in" link.
-	\item John Doe enters his login information (username/email and password).
-	\item John doe clicks the "enter" link.
+	\item John Doe enters his login information (username and password).
+	\item John Doe clicks the "enter" link.
 \end{enumerate}
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Manage account} \\
-John doe wants to edit his account information.
+John Doe wants to edit his account information.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Customer and Content Provider\\
-\>Precondition:\> The actor is logged in\\
-\>Postcondition:\> The actor has changed his/hers account information.
+\>Primary Actor:\> Customer or Content Provider\\
+\>Precondition:\> The actor is logged in.\\
+\>Postcondition:\> The actor has changed his account information.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item John Doe goes to his account-page.
 	\item John Doe changes the data his wishes to be changed.
-	\item John doe clicks the "save" link.
+	\item John Doe clicks the "save" link.
 \end{enumerate}
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Log in} \\
-John doe wants to log in to his account. 
+John Doe wants to log in to his account. 
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Customer, Content Provider and Admin\\
-\>Precondition:\> The actor already has an account\\
+\>Primary Actor:\> Customer, Content Provider or Admin\\
+\>Precondition:\> The actor already has an account.\\
 \>Postcondition:\> The actor is logged in.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item John Doe click on the "log in" link.
 	\item John Doe enters his login information (username/email and password).
-	\item John doe clicks the "enter" link.
+	\item John Doe clicks the "enter" link.
 \end{enumerate}
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Log out} \\
-John doe wants to log out of his account. 
+John Doe wants to log out of his account. 
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Customer, Content Provider and Admin\\
-\>Precondition:\> The actor is already logged in\\
-\>Postcondition:\> The actor is logged off his/hers account.
+\>Primary Actor:\> Customer, Content Provider or Admin\\
+\>Precondition:\> The actor is already logged in.\\
+\>Postcondition:\> The actor is logged off his account.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item John Doe click on the "log out" link.
@@ -110,7 +111,7 @@ Spiderman wants to rent the movie "The Dark Knight Rises".
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Customer\\
 \>Precondition:\> The actor is logged in and it is possible to rent the product.\\
-\>Postcondition:\> The actor has rented the product and the credits is withdrawn from the actor's account.
+\>Postcondition:\> The actor has rented the product and the credits\\ \hspace{85px} is withdrawn from the actor's account.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Spiderman navigates to the movie.
@@ -124,8 +125,8 @@ Spiderman wants to buy the movie "The Dark Knight".
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Customer\\
-\>Precondition:\> The actor is logged in and it is possible to buy the product.\\
-\>Postcondition:\> The actor has bought the product and the credits is withdrawn from the actors account.
+\>Precondition:\> The actor is logged in and it is possible to buy the\\ \hspace{85px} product.\\
+\>Postcondition:\> The actor has bought the product and the credits is\\ \hspace{85px} withdrawn from the actors account.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Spiderman navigates to the movie.
@@ -140,7 +141,7 @@ Spiderman wants to rate the movie "The Dark Knight".
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Customer\\
 \>Precondition:\> The product is published.\\
-\>Postcondition:\> -
+\>Postcondition:\> The average rating of the product is changed accordingly\\ \hspace{85px} to the new rating.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Spiderman navigates to the movie.
@@ -154,11 +155,11 @@ Claus wants to create a new product.
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Content Provider\\
 \>Precondition:\> The actor is logged in.\\
-\>Postcondition:\> The actor has created a new un-published product without an associated media file.
+\>Postcondition:\> The actor has created a new unpublished product\\ \hspace{85px} without an associated media file.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Claus clicks the "Create product" link.
-	\item He inserts the requested data.
+	\item He enters the requested data.
 	\item He clicks the "create" link.
 \end{enumerate}
 % % %
@@ -168,8 +169,8 @@ Claus wants to add a movie to his newly created product.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Content Provider\\
-\>Precondition:\> The actor is logged in and has a product without any media.\\
-\>Postcondition:\> The actor has uploaded the media and the product is published.
+\>Precondition:\> The actor is logged in and has a product without any\\ \hspace{85px} media.\\
+\>Postcondition:\> The actor has uploaded the media and the product is\\ \hspace{85px} published.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Claus navigates to the product.
@@ -182,9 +183,9 @@ Claus wants to add a movie to his newly created product.
 Claus wants to edit information about one of his products.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Content Provider and Admin\\
-\>Precondition:\> The actor is logged in. If actor is a Content Provider, she needs to own the product\\
-\>Postcondition:\> The actor has change the information about the product.
+\>Primary Actor:\> Content Provider or Admin\\
+\>Precondition:\> The actor is logged in. If actor is a Content Provider, he\\ \hspace{85px} needs to own the product.\\
+\>Postcondition:\> The actor has changed the information about the product.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Claus navigates to the product he wants to change.
@@ -197,8 +198,8 @@ Claus wants to edit information about one of his products.
 Claus wants to unpublish one of his products.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Content Provider and Admin\\
-\>Precondition:\> The actor is logged in and the product has be to published. If actor is a Content Provider, she needs to own the product\\
+\>Primary Actor:\> Content Provider or Admin\\
+\>Precondition:\> The actor is logged in and the product has to be published. If actor is a Content Provider, he\\ \hspace{85px} needs to own the product.\\
 \>Postcondition:\> The product is unpublished.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -211,8 +212,8 @@ Claus wants to unpublish one of his products.
 Claus wants to publish one of his products.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Content Provider and Admin\\
-\>Precondition:\> The actor is logged in and the product has be to unpublished and be associated with a media. If actor is a Content Provider, she needs to own the product\\
+\>Primary Actor:\> Content Provider or Admin\\
+\>Precondition:\> The actor is logged in and the product has to be\\ \hspace{85px} unpublished and be associated with a media. If actor is a Content Provider, he needs to own the product.\\
 \>Postcondition:\> The product is published.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -222,7 +223,7 @@ Claus wants to publish one of his products.
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Change information about a specific Customer, Content Provider or Admin} \\
-Morten wants to change Spidermans account information.
+Morten wants to change Spiderman's account information.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Admin\\
@@ -237,11 +238,11 @@ Morten wants to change Spidermans account information.
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Ban a specific account} \\
-Morten wants to ban Claus' account.
+Morten wants to ban Claus's account.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Admin\\
-\>Precondition:\> The actor is logged in, the other action is not already banned, neither is the account in question the admin himself.\\
+\>Precondition:\> The actor is logged in, the other action is not already banned,\\ \hspace{85px} neither is the account in question the admin himself.\\
 \>Postcondition:\> The actor has banned the account in question.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -256,7 +257,7 @@ Morten wants to unban Claus' account.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Admin\\
-\>Precondition:\> The actor is logged in, the other action is banned, and the account in question is not the admin himself.\\
+\>Precondition:\> The actor is logged in, the other action is banned, and the\\ \hspace{85px} account in question is not the admin himself.\\
 \>Postcondition:\> The actor has unbanned the account in question.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -275,7 +276,7 @@ Morten wants to create a new account.
 \>Postcondition:\> A new account is created.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
-	\item Morten opens the "create new account" page
+	\item Morten opens the "create new account" page.
 	\item Morten fills in the form.
 	\item He clicks the "save" link.
 \end{enumerate}
