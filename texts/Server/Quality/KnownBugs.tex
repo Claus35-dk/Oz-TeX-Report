@@ -1,14 +1,14 @@
 \subsubsection{Known Bugs}
 From the first release of our server we have held a list of known bugs and a list of things yet not implemented. These were kept assure throughout the development process.
 \\Here are the lists showing the current shortages of our server:
-\paragraph{Bug list}
+\subsubsubsection{Bug list}
 \begin{itemize}
 \item Adding metadata to products does not work.
 \item Description string for products cannot pass more than 80 characters.
 \item Deleting products not implemented.
 \end{itemize}
 The problem with the length of the description string, is a problem with our JSON serializer and should not take long to correct.
-\paragraph{To do}
+\subsubsubsection{To do}
 \begin{itemize}
 \item Handling metadata not implemented in the C\Sh outer layer
 \item Somehow support deletion of products without robbing the customer of his purchase
@@ -16,7 +16,7 @@ The problem with the length of the description string, is a problem with our JSO
 \item Throw correct error code when creating an account that already exists
 \item Correct product rating calculations
 \end{itemize}
-\paragraph{Improvements}
+\subsubsubsection{Improvements}
 While writing our client we discovered a number of things our server does not support which would have made it easier to write the client. There are also a couple of things we simply did not prioritize when we wrote the server.
 \begin{itemize}
 \item Encryption and security in general
