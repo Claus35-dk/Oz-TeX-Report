@@ -1,6 +1,6 @@
 \subsubsection{Requirements}
 \label{s_serviceRequirements}
-This section will focus on the requirements for the server. The following list lists the non-functional requirements we have defined for the web service.
+This section will focus on the requirements for the server. The following lists the non-functional requirements we have defined for the web service.
 
 \begin{enumerate}[label=NFR-\arabic*]
 	\item When put into production the server should have an uptime of at least 99 \% of planned uptime. Downtime, due to maintenance, must be announced at least 48 hours ahead.
@@ -10,7 +10,7 @@ This section will focus on the requirements for the server. The following list l
 	\item All data (except the product-file itself) must be persisted for at least 5 years after it has gone out of usage (for legal reasons).
 \end{enumerate}
 
-The functional requirements for the server is derived from the use cases and the use case diagram. They can be seen in \tref{functionalRequirements}.
+The functional requirements for the server is derived from the use cases \textbf{[TODO: Ikke hvis use cases bliver smidt længere ned. Kruger said o.O]} and the use case diagram. They can be seen in \tref{functionalRequirements}.
 
 \newcounter{FR_Counter}
 
@@ -18,6 +18,7 @@ The functional requirements for the server is derived from the use cases and the
 \begin{table}[H]
 \centering
 \caption{Functional requirements}
+\label{functionalRequirements}
 \begin{tabular}{|c|p{7cm}|c|c|c|c|}
 \hline
 ID & Description & NS & C & CP & A \\ \hline
@@ -56,8 +57,10 @@ ID & Description & NS & C & CP & A \\ \hline
 \refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & List all products &  &  &  & X \\ \hline
 \refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View customer data &  &  &  & X \\ \hline
 \refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View customer purchases &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Publish any products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Unpublish any products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Delete any products &  &  & X &  \\ \hline
 \end{tabular}\\
 \vspace{3mm}
 NA = Non-authenticated, C = Customer, \\CP = Content provider, A = Admin
-\label{functionalRequirements}
 \end{table}
