@@ -1,17 +1,17 @@
 \section{Chosen technologies}
-In the very beginning before the collaboration with SMU had begun, we decided upon the technologies we would like to use. Later, we had the parts concerning SMU approved by them.
+In the very beginning before the collaboration with SMU had begun, we chose the technologies we would like to use. Later, we had the parts concerning SMU approved by them.
 
 We chose to use F\Sh for developing our server. We had all recently been introduced to the programming language and were very exited about it and the completely different ideas on which it is based.
-We all attended a course in the language, but wanted to use it in a bigger project in order to put it into perspective, and so we unanimously decided it as the language of choice for our server, which was approved by our lecturer.
+We all attended a course in the language, but wanted to use it in a bigger project in order to put it into another perspective, and so we unanimously decided it as the language of choice for our server, which was approved by our lecturer.
 
 For SMU to be able to use our server we had to expose the functionality as a set of web services. Two different technologies were at hand, namely SOAP and REST.
 We chose to use REST because we believe it is much simpler than using SOAP and thereby less time consuming for us to use in the client.
 
 We faced some difficulties in exposing the web service as we chose to use F\Sh.
-We learned that the Windows Communication Foundation for making web services in F\Sh was not in a state that was easy for us to use, and therefore we planned to implement a thin service layer in C\Sh with the responsibility of forwarding requests to the F\Sh code. This, however, turned out not to be so thin as we initially planned it to be.
+We learned that the Windows Communication Foundation for making web services in F\Sh was not in a state that was easy for us to use, and therefore we planned to implement a thin service layer in C\Sh with the responsibility of forwarding requests to the F\Sh code. This, however, turned out not to be as thin as we initially planned it to be.
 
-For storing data we all agreed to use a relational database supporting SQL. We have all used this before with great success and wanted to keep using it.
-Having made this decision we had to choose between two different implementations which would be available in the deployed environment: MySQL and MSSQL. We started out by agreeing on using MySQL, as we all had worked with it before, and favored it to MSSQL. We also talked to our lecturer about this and he was indifferent about it. However, when we started making our data model, and deployed it on the server it became apparent that it was easier to use MSSQL, as we did not need to setup the server in any way then.
+For storing data we all agreed to use a relational database supporting SQL. We have all used this before with great success and we wanted to keep using it.
+Having made this decision we had to choose between two different implementations which would be available in the deployed environment: MySQL and MSSQL. We agreed to use MySQL, as we all had worked with it before, and favored it to MSSQL. We also talked to our lecturer about this and he was indifferent about it. However, when we started making our data model, and deployed it on the server it became apparent that it was easier to use MSSQL, as we did not need to setup the server in any way.
 
-Lastly we decided on which technology we wanted to write our own client in. We did not want to program our client in ASP, or any of the other Microsoft web languages. Some of us had experience with PHP, and one in the group had extensive experience with it. We decided that we wanted to try programming our client in object oriented PHP. We asked our lecturer, and it was approved.
+Lastly we decided which technology we wanted to write our own client in. We did not want to program our client in ASP, or any of the other Microsoft web languages. Some of us had experience with PHP, and one in the group had extensive experience with it. We decided that we wanted to try programming our client in object oriented PHP. We asked our lecturer, and it was approved.
 \newpage
