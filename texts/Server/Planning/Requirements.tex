@@ -4,7 +4,9 @@ This section will focus on the requirements for the server. The following list, 
 \\
 \begin{enumerate}[label=NFR-\arabic*]
 	\item When put into production the server should have an uptime of at least 99 \% of planned uptime. Downtime, due to maintenance, must be announced at least 48 hours ahead.
+	
 	\item From the time a request has been received, to the time an answer has been sent, no more than 500 millisecond must have passed. Expect when the answer contains a product-file (image, movie, video, etc.), in this case there is no deadline.
+	
 	\item All data (except the product-file itself) must be persisted for at least 5 years after it has gone out of usage (for legal reasons).
 \end{enumerate}
 
@@ -12,8 +14,7 @@ From the use case diagram and the use cases we have produced a list of functiona
 
 \begin{enumerate}[label=FR-\arabic*]
 	\item Register new account
-	\item Log in
-	\item Log out
+	\item Authenticate
 	\item Customers can buy products
 	\item Customers can rent products
 	\item Customers can rate products
