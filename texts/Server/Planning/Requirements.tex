@@ -1,7 +1,7 @@
 \subsubsection{Requirements}
 \label{s_serviceRequirements}
-This section will focus on the requirements for the server. The following list, lists the non-functional requirements we have set for the web service.
-\\
+This section will focus on the requirements for the server. The following list lists the non-functional requirements we have defined for the web service.
+
 \begin{enumerate}[label=NFR-\arabic*]
 	\item When put into production the server should have an uptime of at least 99 \% of planned uptime. Downtime, due to maintenance, must be announced at least 48 hours ahead.
 	
@@ -10,7 +10,7 @@ This section will focus on the requirements for the server. The following list, 
 	\item All data (except the product-file itself) must be persisted for at least 5 years after it has gone out of usage (for legal reasons).
 \end{enumerate}
 
-From the use case diagram and the use cases we have produced a list of functional requirements to the web service.
+The functional requirements for the server is derived from the use cases and the use case diagram. They can be seen in table \ref{functionalRequirements}.
 
 \newcounter{FR_Counter}
 
@@ -59,4 +59,5 @@ ID & Description & NS & C & CP & A \\ \hline
 \end{tabular}\\
 \vspace{3mm}
 NA = Non-authendicated, C = Customer, \\CP = Content provider, A = Admin
+\label{functionalRequirements}
 \end{table}
