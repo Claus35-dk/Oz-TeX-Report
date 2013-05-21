@@ -2,7 +2,7 @@
 In the following section we will present the use case diagram and the use cases made to uncover the functional requirements for the system.
 
 \subsubsubsection{Use case diagram}
-We have produced a use case diagram, see Figure \ref{useCaseImg} p. \pageref{useCaseImg}, which outlines the boundaries of the system, and how the different actors (user types) can interact with the server. 
+We have produced a use case diagram, see \fref{useCaseImg}, which outlines the boundaries of the system, and how the different actors (user types) can interact with the server. 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{illustrations/UseCaseDiagram.png}
@@ -12,7 +12,7 @@ We have produced a use case diagram, see Figure \ref{useCaseImg} p. \pageref{use
 
 \subsubsubsection{Use cases}
 In the following section use cases for our system will be listed. Every use case will have a short description of the scenario the use case is representing, if there are any pre- or postconditions these will be mentioned and then the basic flow and success scenario will be listed.\\
-\textit{Only two use cases will be listed here. For a complete list of our use cases, see\apref{Apendix_usecases}}
+\textit{Only two use cases will be listed here. For a complete list of our use cases, see \apref{Apendix_usecases}}
 
 \textbf{Success scenario: Register new user} \\
 Jane Doe wants to register and become a customer. 
@@ -30,7 +30,7 @@ Jane Doe wants to register and become a customer.
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Show product} \\
-Jane Doe wants see what products there are available with the genre "Action".
+Jane Doe wants see what products there are available of the type "ebook".
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> All actors\\
@@ -38,9 +38,9 @@ Jane Doe wants see what products there are available with the genre "Action".
 \>Postcondition:\> -
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
-	\item Jane Doe searches for the category "Action".
-	\item She browse the returned list, and clicks on one of the titles to see more.
-	\item Jane Doe is presented with a more detailed view of the chosen product.
+	\item Jane Doe clicks the browse products link.
+	\item She clicks more in the box containing ebooks.
+	\item She is presented with all the products of type ebook.
 \end{enumerate}
 % % %
 \vspace{3mm}
@@ -137,8 +137,8 @@ Spiderman wants to rate the movie "The Dark Knight".
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Customer\\
-\>Precondition:\> The actor is logged in and it's possible to buy the product.\\
-\>Postcondition:\> The actor has bought the product and the credits is withdrawn from the actors account.
+\>Precondition:\> The product is published.\\
+\>Postcondition:\> -
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Spiderman navigates to the movie.
@@ -225,11 +225,11 @@ Morten wants to change Spidermans account information.
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Admin\\
 \>Precondition:\> The actor is logged in.\\
-\>Postcondition:\> The actor has changed the information about the wished account.
+\>Postcondition:\> The actor has changed the information about the account.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Morten navigates to Spiderman's profile-page.
-	\item He make the wished changes.
+	\item He make the wanted changes.
 	\item He clicks the "save" link.
 \end{enumerate}
 % % %
