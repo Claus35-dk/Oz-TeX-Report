@@ -1,39 +1,32 @@
 \section{Conclusion}
-\textbf{[ TODO: Should be rewritten in same style as server conclusion (M) ]}
-In this report we follow the development of a web service and a matching client in form of a website. We begin the report by introducing the project and specifying it by choosing technologies and target audience. We also introduce our collaboration with a Singaporean group of students.
-\\After that our report is divided into two parts: Server and Client. Each part describes the process of development for the part at hand.
+In this report we follow the development of a web service and a matching client in form of a website. Our report is divided into two parts: Server and Client. Each part describes the process of development for the part at hand.
 \\An important part of this project was our collaboration with a Singaporean group of students. An accord of our collaboration can be found in the Server part of this report as our collaboration was in regard to the server and the web services it is hosting.
 
 We were terribly behind on our assignments and we did not have time to write a review of another groups report. \textbf{[ TODO: This needs some work. Quite sudden. (M) ]}
+\\\textbf{Claus agrees. Should first part be removed completely?}
 
 \subsubsubsection{Server}
-We created a web services written partly in C\Sh, but mostly in F\Sh. We set a number of requirements for our service. Due to the combined load of the shared server we do not meet our requirements for uptime and response time. We meet almost all requirements. The lacking functionality is listed in our To do list:
-% Be aware: The Todo is copied from the Server\Quality chapter. Any changes should be synchronized.
+We created a web services written partly in C\Sh, but mostly in F\Sh. We set a number of requirements for our service. Due to the combined load of the shared server we do not meet our requirements for uptime and response time.
+\\We meet almost all requirements. We lack the following functionality:
 \begin{itemize}
-\item Handling metadata not implemented in the C\Sh outer layer
-\item Somehow support deletion of products without robbing the customer of his purchase
-\item Throw correct error code when creating an account that already exists
-\item Correct product rating calculations
+\item Handling of metadata
+\item Deletion of products
+\item Acquiring the last authentication time of an account
 \end{itemize}
 \mbox{}For the web service API see \apref{API_PDF}.
 
 \subsubsubsection{Collaboration}
 We had a successful collaboration with our Singaporean group. Lynette, Cai Ling and Celestine were as engaged and enthusiastic about the project as we were. We held two weekly meetings and we chatted daily.
-% Tilføj mere - Claus
+\\\textbf{\#\#\# Tilføj mere - Claus \#\#\#}
 
 \subsubsubsection{Client}
-We created a client in object oriented PHP which utilize the web service hosted on our server. The client is written by the principles of the MVC design pattern and its modules is interchangeable.
+\textbf{\#\#\# The following is an almost exact copy of the Client/Server. What can we do about that? - Claus \#\#\#}
 
-We did not have the time to fulfill all the requirements and use cases we had set for ourselves. Specifically we did not create a widget for uploading thumbnails and other media. Aside from that our client is functional and very usable:
-% Be aware: The following list is copied from Client\Conclusion. Any changes should be synchronized.
-\begin{itemize}
-\item Create, view and edit accounts
-\item Create, view and edit products
-\item Buy credits (though they are free for now)
-\item View and stream purchases
-\item Buy, rent and rate products
-\item Administrators can edit everything and create content provider and administrator accounts
-\end{itemize}
+We wrote our client in object oriented PHP and we wrote our tests in PHPUnit. The client makes use of the web service described in the first part of this report. The client is written by the principles of the MVC design pattern and its modules is interchangeable.
+
+We wanted to write an object oriented client which should be very easy to maintain and that is exactly what we did. A single view creates the web page and fills its content with a widget composite structure.
+
+We did not have the time to fulfill all the requirements and use cases we had set for ourselves. Specifically we did not create a widget for uploading thumbnails and other media. Aside from that our client is fully functional.
 
 \#\#\# Add the lack of ban/unban if the functionality is not added \#\#\#
 
