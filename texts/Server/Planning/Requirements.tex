@@ -12,22 +12,51 @@ This section will focus on the requirements for the server. The following list, 
 
 From the use case diagram and the use cases we have produced a list of functional requirements to the web service.
 
-\begin{enumerate}[label=FR-\arabic*]
-	\item Register new account
-	\item Authenticate
-	\item Customers can buy products
-	\item Customers can rent products
-	\item Customers can rate products
-	\item Customers can stream products
-	\item Customers can download products
-	\item Customers and content providers can change their own account information
-	\item Content providers can upload product files
-	\item Content providers can create new products
-	\item Content providers can upload product thumbnails
-	\item Content providers can change informations about their own products
-	\item Admins can change information about any product
-	\item Admins can change information about any account
-	\item Admins can get a list of all accounts
-	\item Admins can ban an account
-	\item Admins can unban an account
-\end{enumerate}
+\newcounter{FR_Counter}
+
+
+\begin{table}
+\centering
+\caption{Functional requirements}
+\begin{tabular}{|c|p{7cm}|c|c|c|c|}
+\hline
+ID & Description & NS & C & CP & A \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Register new account & X & & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Authenticate & X & & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Get product information & X & X & X & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View products & X & X & X & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Search for products & X & X & X & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Buy products & & X & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Rent products & & X & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Rate products & & X & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Stream products & & X & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Download products & & X & & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View purchases history &  & X &  &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Buy credits &  & X &  &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View accounts &  & X & X & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Change own account information & & X & X & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Upload product files & & & X & \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Create new products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Upload product thumbnails &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Change informations about own products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Publish own products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Unpublish own products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Delete own products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & List own products &  &  & X &  \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Change information about any product &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Change information about any account &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Get a list of all accounts &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Ban an account &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Unban an account &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Get a list of all accounts &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Create new account of any type &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Reset any password &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Delete any product &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & Change customer credits &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & List all products &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View customer data &  &  &  & X \\ \hline
+\refstepcounter{FR_Counter}FR-\arabic{FR_Counter} & View customer purchases &  &  &  & X \\ \hline
+\end{tabular}\\
+\vspace{3mm}
+NA = Non-authendicated, C = Customer, \\CP = Content provider, A = Admin
+\end{table}
