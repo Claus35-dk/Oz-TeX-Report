@@ -17,6 +17,7 @@
 \usepackage{longtable} % tables over multiple pages
 \usepackage{pdfpages} % include PDF
 \usepackage{enumitem} % used bu the set list markup
+\usepackage[T1]{fontenc} % For writing < and > correctly
 
 % Markup
 \setlength{\parskip}{0.8em} % Setting paragraph view
@@ -25,7 +26,7 @@
 % commands
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % custom command used for tables
 \newcommand{\specialcell}[1]{\begin{tabular}{@{}c@{}#1\end{tabular}}}
-\newcommand{\Sh}{\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \#}}
+\newcommand{\Sh}{\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\tiny\bf \# }}
 \newcommand{\cref}[1]{ Figure \ref{#1}, page~\pageref{#1}}
 \newcommand{\acref}[1]{ Appendix, \cref{#1}}
 \newcommand{\tref}[1]{ Table \ref{#1}, page~\pageref{#1}}
