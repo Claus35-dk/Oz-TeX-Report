@@ -5,7 +5,7 @@ We chose to use the MVC pattern for structuring our client.
 Furthermore we divided the program into modules, each responsible for their own part. It made it easy to add or remove modules.
 
 When a request is made for a page in our client, we find the module to use from the URI requested.
-The next argument in the URI is which method to invoke. In our variation of MVC we invoke the method requested in the modules default controller, which then \todo{Not good formulation}{Michael} is responsible for returning some content to be rendered in form of a widget.
+The next argument in the URI is which method to invoke. In our variation of MVC we invoke the method requested in the modules default controller, which then is responsible for returning the content to be rendered in the form of a widget.
 
 Our implementation of the MVC pattern defines View a little differently than traditionally.
 We have a single view in our entire system, namely the CommonView.
@@ -15,7 +15,7 @@ The base class of all widgets basically just forces subclasses to override the T
 
 The widget structure is based on the composite pattern. A lot of the widgets can contain other widgets, just like a lot of HTML elements are able to contain other HTML elements.
 
-Our widget structure makes everything interchangeable and easy to extend. It also helps us avoid code duplication, as we define elements like the <div> a single place in the code \todo{Use a more interesting example}{Philip}. If we need to change the implementation of all wrappers on the site, we would only have to change it in one place.
+Our widget structure makes everything interchangeable and easy to extend. It also helps us avoid code duplication, as we define elements like the <div> a single place in the code. If we need to change the implementation of all wrappers on the site, we would only have to change it in one place.
 
 Because of the composite structure and inheritance, we can often create new widgets without writing any HTML. We simply specify attributes and perhaps add some Javascript or CSS.
 

@@ -1,5 +1,5 @@
 \subsubsection{Data Model}
-When planning the implementation of the server we decided to use a MSSQL database to store our data. Then we spent hours \todo{fjerne hvor længe vi brugte}{k} considering different scenarios and arranging the entities into the following data model.
+When planning the implementation of the server we decided to use a MSSQL database to store our data. Then we spent hours considering different scenarios and arranging the entities into the following data model.
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{illustrations/Datamodel.png}
   \caption{Our data model as used by the database}
@@ -9,7 +9,7 @@ We will now explain the different entities and their purpose in our system.
 
 \begin{description}
 \item[User] \hfill \\
-Our first and possibly most important entity is the User entity. It contains information regarding each user of our system. Each user also has an optional \todo{optional country sounds weird}{Morten} country, referenced through the Country entity \todo{This entity is... Or?}{K} explained later.
+Our first and possibly most important entity is the User entity. It contains information regarding each user of our system. Each user also has an optional relation to the country entity, explained later.
 
 Furthermore, the User entity has a relation to the Usertype entity. Having Usertype as a separate entity as opposed to simply an attribute makes it possible for us to create relations to the type and not each individual user. For instance we have a relation between Usertype and ActionGroup, explained later.
 
@@ -17,7 +17,7 @@ Furthermore, the User entity has a relation to the Usertype entity. Having Usert
 Each user can have a country defined. The reason we modeled this as a separate entity is so that the user can select their country from a list of available ones.
 
 \item[Usertype] \hfill \\
-The user type defines which type the user is. \todo{Funny sentence}{Michael} The possible values in our program is:
+The user type defines the user. The possible types in our program are:
 \begin{itemize}
 	\item Customer
 	\item Content Provider
@@ -32,7 +32,7 @@ An action group is a way to gather permissions in a group. This way we avoid hav
 Our implementation was not like this though. We ended up making this entity completely useless as we created the exact same action groups as we had user types.
 
 \item[AllowedAction] \hfill \\
-Our AllowedAction entity is our way of defining permissions in the system. Whenever you need to check whether or not a user has permission to do something in our system you check the allowed action name (an example could be BAN\_UNBAN\_ANY). \todo{skift "you" ud med "we"}{k}
+Our AllowedAction entity is our way of defining permissions in the system. Whenever we need to check whether or not a user has permission to do something in our system you check the allowed action name (an example could be BAN\_UNBAN\_ANY).
 
 The allowed action is referenced by both the ActionGroup entity and the Product entity. This is because we have chosen to model whether or not products should be buyable or rentable in our permissions system. Products can therefore have BUYABLE and RENTABLE allowed actions.
 
@@ -50,7 +50,7 @@ There are three other entities which refer to Products, all described later:
 Each product has a product type. The product type is used to semantically separate the different types of products. Furthermore, it references another entity called MimeType.
 
 \item[MimeType] \hfill \\
-MimeType is used to limit which files can be uploaded for a specific product type. When creating a product you choose which type it is of. \todo{Er det meningne at der er et punktum}{k}As it makes no sense to upload a PDF-file for a product of type `movie' we chose to limit this using the information stored here.
+MimeType is used to limit which files can be uploaded for a specific product type. When creating a product you choose its type. We chose to limit this because it makes no sense for example to upload a PDF-file for a product of type `movie'.
 
 \item[MetaData] \hfill \\
 A product can have zero-to-many meta data attached. This can be used to describe things that are specific to the particular product, like pages for an ebooks or duration for a movie. Each meta data has a reference to the MetaDataType entity.
@@ -64,7 +64,7 @@ This is used to store ratings that users have given products. Each user can only
 We have defined ratings to be from -5 to 5. This means that users can be positive or negative towards a product.
 
 \item[Transaction] \hfill \\
-Our Transaction entity represents a finished customer purchase. \todo{Not defined to be finished}{Michael} It records the information needed by our system for a purchase. If it is a rent the expire date is also stored here.
+Our Transaction entity represents a customer purchase. It records the information needed by our system for a purchase. If it is a rent the expire date is also stored here.
 
 \item[Log] \hfill \\
 While we planned our entire data model we wanted to make everything loggable. It is important to be able to monitor the system and the activity herein, especially for legal reasons. Furthermore, our implementation would make it possible to revert things to previous states.

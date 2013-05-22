@@ -1,6 +1,4 @@
 \subsubsection{Testing}
-We decided to write PHPUnit tests for the controllers and models, \todo{Not for controllers, as they return widgets}{Michael} while testing of the views would be done by blackbox testing. We tested normal behavior and the exception handling of the exception thrown by the server. This ensured that we had a much better idea of where any problems arose during debugging. Error messaging in PHP is known for being very limited. By having a good idea of how the individual parts behaved we saved time on the debugging, since we did not have to go through all the code involved in-depth to solve the problem.
+We decided to write PHPUnit tests for the models, while testing of the views would be done by blackbox testing. We tested normal behavior and the exception handling of the exception thrown by the server. This ensured that we had a much better idea of where any problems arose during debugging. Error messaging in PHP is known for being very limited. By having a good idea of how the individual parts behaved we saved time on the debugging, since we did not have to go through all the code involved in-depth to solve the problem.
 
 Since much of what was tested on the widgets focused on the design, this was done by blackbox testing as we saw it as the only way to test it.
-
-\todo{Seems unnecessary since much is repeated from the Test Strategy section. Remove repeated content and put rest into the Test Strategy section.}{Philip}
