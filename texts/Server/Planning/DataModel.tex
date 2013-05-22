@@ -9,7 +9,7 @@ We will now explain the different entities and their purpose in our system.
 
 \begin{description}
 \item[User] \hfill \\
-Our first and possibly most important entity is the User entity. It contains information regarding each user of our system. Each user also has an optional country, referenced through the Country entity explained later.
+Our first and possibly most important entity is the User entity. It contains information regarding each user of our system. Each user also has an optional \todo{optional country sounds weird}{Morten} country, referenced through the Country entity explained later.
 
 Furthermore, the User entity has a relation to the Usertype entity. Having Usertype as a separate entity as opposed to simply an attribute makes it possible for us to create relations to the type and not each individual user. For instance we have a relation between Usertype and ActionGroup, explained later.
 
