@@ -1,12 +1,12 @@
 \subsection{Program Structure}
-As mentioned our server is written in F\Sh which is a very powerful functional programming language with pattern matching and parallel programming abilities.
+As mentioned \todo{before or above missing?}{Morten} our server is written in F\Sh which is a very powerful functional programming language with pattern matching and parallel programming abilities.
 F\Sh can even be object oriented, but we have chosen to stick with the functional paradigm: We wanted the exercise of writing a purely functional system.
 
-Our system is built of modules which are put together like bricks into layers that form a great structure. \textbf{[ TODO: Not quite satisfied with this formulation (M) ]}
+Our system is built of modules which are put together like bricks into layers that form a great structure. \todo{Not quite satisfied with this formulation}{Michael}
 \\We have an Outer Layer - or shell - which is the published web services. This layer is actually written in C\Sh using the Windows Communications Foundation.
 \\Then we have a Security Layer which uses a Permission Module to verify users and permissions before invoking functions deeper.
 \\The Application Logic Layer is the actual working layer which has Account Module, Product Module and more.
-\\The Persistence Layer is the lowest logic layer. It has the responsibility to create, save and update information on some sort of data storage.
+\\The Persistence Layer is the lowest logic layer \todo{This sounds to me like the persistence layer is stupid and/or of poor character}{Morten}. It has the responsibility to create, save and update information on some sort of data storage.
 \\Finally we have our Database in which we store our data.
 
 Each Module can be replaced and the Checking Layer is entirely optional. For example one might want to change the Persistence Layer to persist against a file-system instead of a database, or one might want to do less or more extensive checks in the Checking Layer, without changing any of the other layers.
