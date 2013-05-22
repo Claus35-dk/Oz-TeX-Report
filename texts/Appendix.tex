@@ -1,6 +1,7 @@
 \addcontentsline{toc}{section}{\hspace{17pt}Appendix} % Adds to the Table of contents
 \section*{Appendix}
 \renewcommand*\thesubsection{\Roman{subsection}} % Makes all subsections be listed with upper case roman numbers
+\input{texts/Appendix/Manual.tex}
 \input{texts/Appendix/ContributionList.tex}
 \input{texts/Appendix/UseCases.tex}
 % Following should be added as inputs
@@ -14,7 +15,8 @@
 \includegraphics[scale=0.8]{illustrations/SmuSchedule.png}
 \caption{Combined schedule}
 \end{figure}
-\subsection{SMU Wiki}
+\newpage
+\input{texts/Appendix/SmuWiki.tex}
 \label{smuwiki}
 \newpage
 \includepdf[scale=0.8,pagecommand={\subsection{Web service API}\label{API_PDF}},pages=1]{texts/Appendix/API.pdf}
