@@ -50,7 +50,7 @@ There are three other entities which refer to Products, all described later:
 Each product has a product type. The product type is used to semantically separate the different types of products. Furthermore, it references another entity called MimeType.
 
 \item[MimeType] \hfill \\
-MimeType is used to limit which files can be uploaded for a specific product type. When creating a product you choose which type it is of. As it makes no sense to upload a PDF-file for a product of type `movie' we chose to limit this using the information stored here.
+MimeType is used to limit which files can be uploaded for a specific product type. When creating a product you choose which type it is of. \todo{Er det meningne at der er et punktum}{k}As it makes no sense to upload a PDF-file for a product of type `movie' we chose to limit this using the information stored here.
 
 \item[MetaData] \hfill \\
 A product can have zero-to-many meta data attached. This can be used to describe things that are specific to the particular product, like pages for an ebooks or duration for a movie. Each meta data has a reference to the MetaDataType entity.
