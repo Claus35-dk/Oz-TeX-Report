@@ -1,5 +1,5 @@
 \subsubsection{Data Model}
-When planning the implementation of the server we decided to use a MSSQL database to store our data. Then we spent hours considering different scenarios and arranging the entities into the following data model.
+When planning the implementation of the server we decided to use a MSSQL database to store our data. Then we spent hours \todo{fjerne hvor længe vi brugte}{k} considering different scenarios and arranging the entities into the following data model.
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{illustrations/Datamodel.png}
   \caption{Our data model as used by the database}
@@ -9,7 +9,7 @@ We will now explain the different entities and their purpose in our system.
 
 \begin{description}
 \item[User] \hfill \\
-Our first and possibly most important entity is the User entity. It contains information regarding each user of our system. Each user also has an optional \todo{optional country sounds weird}{Morten} country, referenced through the Country entity explained later.
+Our first and possibly most important entity is the User entity. It contains information regarding each user of our system. Each user also has an optional \todo{optional country sounds weird}{Morten} country, referenced through the Country entity \todo{This entity is... Or?}{K} explained later.
 
 Furthermore, the User entity has a relation to the Usertype entity. Having Usertype as a separate entity as opposed to simply an attribute makes it possible for us to create relations to the type and not each individual user. For instance we have a relation between Usertype and ActionGroup, explained later.
 
@@ -32,7 +32,7 @@ An action group is a way to gather permissions in a group. This way we avoid hav
 Our implementation was not like this though. We ended up making this entity completely useless as we created the exact same action groups as we had user types.
 
 \item[AllowedAction] \hfill \\
-Our AllowedAction entity is our way of defining permissions in the system. Whenever you need to check whether or not a user has permission to do something in our system you check the allowed action name (an example could be BAN\_UNBAN\_ANY).
+Our AllowedAction entity is our way of defining permissions in the system. Whenever you need to check whether or not a user has permission to do something in our system you check the allowed action name (an example could be BAN\_UNBAN\_ANY). \todo{skift "you" ud med "we"}{k}
 
 The allowed action is referenced by both the ActionGroup entity and the Product entity. This is because we have chosen to model whether or not products should be buyable or rentable in our permissions system. Products can therefore have BUYABLE and RENTABLE allowed actions.
 
