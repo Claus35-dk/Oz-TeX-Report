@@ -11,8 +11,8 @@ We have produced a use case diagram, see \fref{useCaseImg}, which outlines the b
 \end{figure}
 
 \subsubsubsection{Use cases}
-\textbf{[TODO: Add the use cases to the client? Krüger asked.]}
-\textbf{[TODO: Vælg hvilke use cases som skal smide i apendix. Krüger said *indsæt socialt akavet smiley*. [ TODO: Ret 'apendix' til 'appendix' i TODO. Hilsen Philip.]]}
+\todo{Add the use cases to the client?}{Nicolai}
+\todo{Vælg hvilke use cases som skal smide i appendix.}{Nicolai}
 
 In the following section example use cases for our system is listed. Every use case has a short description of the scenario it is representing, its pre- or postconditions if any, and then its basic flow and success scenario.\\
 Only two use cases are listed here. For a complete list of our use cases, see \apref{Apendix_usecases}
@@ -87,8 +87,8 @@ John Doe wants to log in to his account.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item John Doe click on the "log in" link.
-	\item John Doe enters his login information (username/email and password).
-	\item John Doe clicks the "enter" link.
+	\item John Doe enters his login information (username/email and password). \todo{Not email}{Michael}
+	\item John Doe clicks the "enter" link. \todo{Not enter, login}{Michael}
 \end{enumerate}
 % % %
 \vspace{3mm}
@@ -116,7 +116,7 @@ Spiderman wants to rent the movie "The Dark Knight Rises".
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Spiderman navigates to the movie.
 	\item He clicks the "rent product" link.
-	\item He confirms that he will spend 50 credits to rent this product for a week.
+	\item He confirms that he will spend 50 credits to rent this product for a week. \todo{We do not confirm}{Michael}
 \end{enumerate}
 % % %
 \vspace{3mm}
@@ -131,7 +131,7 @@ Spiderman wants to buy the movie "The Dark Knight".
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Spiderman navigates to the movie.
 	\item He clicks the "buy product" link.
-	\item He confirms that he will spend 100 credits to buy this product.
+	\item He confirms that he will spend 100 credits to buy this product. \todo{We do not confirm}{Michael}
 \end{enumerate}
 % % %
 \vspace{3mm}
@@ -199,7 +199,7 @@ Claus wants to unpublish one of his products.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Content Provider or Admin\\
-\>Precondition:\> The actor is logged in and the product has to be published. If actor is a Content Provider, he\\ \hspace{85px} needs to own the product.\\
+\>Precondition:\> The actor is logged in and the product has to be published. If actor is a\\ \hspace{85px} Content Provider, he needs to own the product.\\
 \>Postcondition:\> The product is unpublished.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -242,7 +242,7 @@ Morten wants to ban Claus's account.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Admin\\
-\>Precondition:\> The actor is logged in, the other action is not already banned,\\ \hspace{85px} neither is the account in question the admin himself.\\
+\>Precondition:\> The actor is logged in, the other actor is not already banned,\\ \hspace{85px} neither is the account in question the admin himself.\\
 \>Postcondition:\> The actor has banned the account in question.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -252,12 +252,13 @@ Morten wants to ban Claus's account.
 \end{enumerate}
 % % %
 \vspace{3mm}
+\todo{The next two. We do not confirm, and it is not a link}{Michael}
 \textbf{Success scenario: Unban a specific account} \\
 Morten wants to unban Claus' account.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Admin\\
-\>Precondition:\> The actor is logged in, the other action is banned, and the\\ \hspace{85px} account in question is not the admin himself.\\
+\>Precondition:\> The actor is logged in, the other actor is banned, and the\\ \hspace{85px} account in question is not the admin himself.\\
 \>Postcondition:\> The actor has unbanned the account in question.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
