@@ -17,6 +17,8 @@ We have produced a use case diagram, see \fref{useCaseImg}, which outlines the b
 In the following section example use cases for our system is listed. Every use case has a short description of the scenario it is representing, its pre- or postconditions if any, and then its basic flow and success scenario.\\
 Only two use cases are listed here. For a complete list of our use cases, see \apref{Apendix_usecases}
 
+
+\todo{Fjern noget linjemellemrum ved samtlige use cases}{k}
 \textbf{Success scenario: Register new user} \\
 Jane Doe wants to register and become a customer. 
 \begin{tabbing}
@@ -81,7 +83,7 @@ John Doe wants to edit his account information.
 John Doe wants to log in to his account. 
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
-\>Primary Actor:\> Customer, Content Provider or Admin\\
+\>Primary Actor:\> Customer, Content Provider or Admin\todo{change to un-auth}{k}\\
 \>Precondition:\> The actor already has an account.\\
 \>Postcondition:\> The actor is logged in.
 \end{tabbing}
@@ -93,6 +95,7 @@ John Doe wants to log in to his account.
 % % %
 \vspace{3mm}
 \textbf{Success scenario: Log out} \\
+\todo{Remove if not moved to client}{k}
 John Doe wants to log out of his account. 
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
@@ -175,7 +178,7 @@ Claus wants to add a movie to his newly created product.
 \begin{enumerate} \setlength{\itemsep}{-1mm}
 	\item Claus navigates to the product.
 	\item He clicks the "add media" link.
-	\item He chooses the media from his local computer and clicks the "upload" link.
+	\item He chooses the media from his local \todo{remove "local"}{k} computer and clicks the "upload" link.
 \end{enumerate}
 % % %
 \vspace{3mm}
@@ -199,7 +202,7 @@ Claus wants to unpublish one of his products.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Content Provider or Admin\\
-\>Precondition:\> The actor is logged in and the product has to be published. If actor is a\\ \hspace{85px} Content Provider, he needs to own the product.\\
+\>Precondition:\> The actor is logged in and the product has to be published. If the actor is a\\ \hspace{85px} Content Provider, he needs to own the product.\\
 \>Postcondition:\> The product is unpublished.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
@@ -213,7 +216,7 @@ Claus wants to publish one of his products.
 \begin{tabbing}
 \hspace{5mm}\=\hspace{26mm}\=\kill
 \>Primary Actor:\> Content Provider or Admin\\
-\>Precondition:\> The actor is logged in and the product has to be\\ \hspace{85px} unpublished and be associated with a media. If actor is a Content Provider, he needs to own the product.\\
+\>Precondition:\> The actor is logged in and the product has to be\\ \hspace{85px} unpublished and be associated with a media. If the actor is a Content Provider, he needs to own the product.\\
 \>Postcondition:\> The product is published.
 \end{tabbing}
 \begin{enumerate} \setlength{\itemsep}{-1mm}
