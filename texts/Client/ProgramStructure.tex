@@ -1,18 +1,24 @@
 % !TeX spellcheck = en_US
 \subsection{Program Structure}
-We spent a long time planning the program structure before developing our client. We wanted to have a good plan in this part, contrary to the previous one.
+We spent a long time planning the program structure before developing our client. We wanted to have a good plan for this part, contrary to the previous one.
 
-We chose to use the MVC pattern for structuring our client. Furthermore it was divided up into modules, each responsible for their own part. It made it easy to add or remove modules.
+We chose to use the MVC pattern for structuring our client.
+Furthermore we divided the program into modules, each responsible for their own part. It made it easy to add or remove modules.
 
-When a request is made for a page in our client, we find the module to use from the URI requested. The next argument in the URI is which method to invoke. In our variation of MVC we invoke the method requested in the modules default controller. This is then responsible for returning some renderable content in form of a widget.
+When a request is made for a page in our client, we find the module to use from the URI requested.
+The next argument in the URI is which method to invoke. In our variation of MVC we invoke the method requested in the modules default controller, which then is responsible for returning some content able to be rendered in form of a widget.
 
-Our implementation of the MVC pattern defines View a little different than traditionally. We have a single view in our entire system: the CommonView. What this does is creating the header and footer, and put the page content in the middle. All other view in our system are widgets. A widget is an object that can be turned into HTML. The base class of a all widgets basically just forces subclasses to override the ToHtml method.
+Our implementation of the MVC pattern defines View a little differently than traditionally.
+We have a single view in our entire system, namely the CommonView.
+What this does is creating the header and footer, and put the page content in the middle.
+All other views in our system are widgets. A widget is an object that can be transformed into HTML.
+The base class of all widgets basically just forces subclasses to override the ToHtml method.
 
-The widget structure is based on the composite pattern. A lot of the widgets can contain other widgets. Just like a lot of HTML elements can contain other HTML elements.
+The widget structure is based on the composite pattern. A lot of the widgets can contain other widgets, just like a lot of HTML elements are able to contain other HTML elements.
 
-Our widget structure makes everything interchangeable, and easy to extend. It also helps us avoiding a lot of code duplication, as we define elements like the <div> a single place in the code. If we need to change the implementation of all wrappers on the site, we would only have to change it in one place.
+Our widget structure makes everything interchangeable and easy to extend. It also helps us avoiding code duplication, as we define elements like the <div> a single place in the code \todo{Use a more interesting example}{Philip}. If we need to change the implementation of all wrappers on the site, we would only have to change it in one place.
 
-Because of the composite structure and inheritance, we could completely avoid writing any HTML in the modules widgets. We would extend the base class needed (in most cases the Widget\_Wrapper that contains a list of widgets and wraps this in a <div> element). We would then create the structure needed for the particular widget in the constructor. And when the ToHtml-method was called on the Widget\_Wrapper, it calls the ToHtml-methods of all the children, and gathers the output. 
+Because of the composite structure and inheritance, we could completely avoid writing any HTML in the widgets of the modules.
 
 Our models work like in any other MVC application. In our case we have a web service to store our data, and the models operate on this.
 	\newpage
