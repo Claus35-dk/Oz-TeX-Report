@@ -10,17 +10,18 @@ From the first release of our server we have held a list of known bugs and a lis
 The problem with the length of the description string, is a problem with our JSON serializer and should not take long to correct.
 \subsubsubsection{To do}
 \begin{itemize}
-\item Handling metadata not implemented in the C\Sh outer layer
-\item Somehow support deletion of products without robbing the customer of his purchase
-\item Throw correct error code when creating an account that already exists
-\item Correct product rating calculations
+\item Handling metadata implemented, but not made available.
+\item Somehow support deletion of products without robbing the customer of his purchase.
+\item Correct product rating calculations.
+\item Correct the improper detection of data too large to be handled by the database.
+\item Implement ControlledProduct and ControlledCredits properly.
 \end{itemize}
 \subsubsubsection{Improvements}
 While writing our client we discovered a number of things our server does not support which would have made it easier to write the client. There are also a couple of things we simply did not prioritize when we wrote the server.
 \begin{itemize}
-\item Encryption and security in general
+\item Encryption and security in general.
 \item Simple web service methods such as a more specified method to get one or a few products.
-\item A method for getting unpublished products for the Content Providers Dashboard
-\item Being able to limit the number of items returned from a service call
+\item A method for getting unpublished products for the Content Providers Dashboard.
+\item Being able to limit the number of items returned from a service call.
 \end{itemize}
 \textbf{[ TODO: More? (C) ]}
