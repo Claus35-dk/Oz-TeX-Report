@@ -1,4 +1,3 @@
-% !TeX spellcheck = en_US
 \subsection{Program Structure}
 We spent a long time planning the program structure before developing our client. We wanted to have a good plan for this part, contrary to the previous one.
 
@@ -16,9 +15,9 @@ The base class of all widgets basically just forces subclasses to override the T
 
 The widget structure is based on the composite pattern. A lot of the widgets can contain other widgets, just like a lot of HTML elements are able to contain other HTML elements.
 
-Our widget structure makes everything interchangeable and easy to extend. It also helps us avoiding code duplication, as we define elements like the <div> a single place in the code \todo{Use a more interesting example}{Philip}. If we need to change the implementation of all wrappers on the site, we would only have to change it in one place.
+Our widget structure makes everything interchangeable and easy to extend. It also helps us avoid code duplication, as we define elements like the <div> a single place in the code \todo{Use a more interesting example}{Philip}. If we need to change the implementation of all wrappers on the site, we would only have to change it in one place.
 
-Because of the composite structure and inheritance, we could completely avoid writing any HTML in the widgets of the modules.
+Because of the composite structure and inheritance, we can often create new widgets without writing any HTML. We simply specify attributes and perhaps add some Javascript or CSS.
 
 Our models work like in any other MVC application. In our case we have a web service to store our data, and the models operate on this.
-	\newpage
+\newpage
