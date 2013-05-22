@@ -1,14 +1,17 @@
 \subsection{Reflection (Server)}
-Due to previous experiences we spent a lot of time on careful planning. Even then there are a lot of things we would do differently, were we given the chance to start again.
+Due to previous experiences we spent a lot of time on planning. Even then there are a lot of things we would like to do differently, were we given the chance to start over again.
 
-We are very happy with our flexible design of layers and modules, but of course we want to make it even better and even less coupled next time. A major mistake of ours is the lack of design patterns throughout the server. When we review and debug our code, it proves to be more coupled than we intended. 
+We are very happy with our flexible design of layers and modules, but of course we want to make it even better and even less coupled next time. A major mistake of ours is the lack of design patterns throughout the server. When we review and debug our code, it proves to be more coupled than we intended. Being new to F# and structuring code in a not object oriented manner, however, we are not completely sure what "design patterns" are available.
 
 We wanted to create a logging feature where every module could report events and errors, but we never had the time. Writing the log might have saved us time. When debugging it was not always apparent which module failed or which module received faulty information. 
 
-When writing the client, we encountered a surprising lack of functionality from our server - exactly what we had tried hard to avoid. Not before writing the client, could we have predicted which services we would require. Unfortunately we were in a terrible lack of time and we kept our focus on the client and did not write any new services.
+When writing the client, we encountered a surprising lack of functionality from our server - exactly what we had tried hard to avoid. It is, however, hard to foresee and write all functionality which will be needed in the future, and so the only way we could have done better was if we had developed the client and server in parallel or the client first \todo{Rephrase to something better.}{Philip}.
+Unfortunately we were in a terrible lack of time and we kept our focus on the client and did not write any new services.
 
 \subsection{Reflection (SMU Collaboration)}
 We were excited about the project and we really hoped to get a group who were as engaged and enthusiastic about the project as we were - and luckily we did.
 
 Our collaboration with our Singaporean group went very well - beyond all expectations really. We got the impression that they also enjoyed working with us. We have held many meetings and we chatted every day.
+
+\todo{Is this not mentioned other place?}{Philip}
 \newpage
